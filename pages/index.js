@@ -10,7 +10,7 @@ export default function Users({users}) {
         <Layout>
             <Head>
                 <title> Pagina principal de usuarios</title>
-                <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-0evHe/X+R7YkIZDRvuzKMRqM+OrBnVFBL6DOitfPri4tjfHxaWutUpFmBp4vmVor" crossorigin="anonymous">
+                <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-0evHe/X+R7YkIZDRvuzKMRqM+OrBnVFBL6DOitfPri4tjfHxaWutUpFmBp4vmVor" crossOrigin="anonymous">
                 </link>
 
             </Head>
@@ -32,9 +32,9 @@ export default function Users({users}) {
                                 <th></th>                                   
                             </tr>
                         </thead>
-                        {users.map(user => {
+                        {users.map((user,i) => {
                             return (
-                                <tbody>
+                                <tbody key={i}>
                                     <tr>
                                         <td>
                                             <Link href={`/users/[id]`} as={`/users/${user.id}`} key={user.id}>
